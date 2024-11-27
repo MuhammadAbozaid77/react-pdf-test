@@ -1,5 +1,6 @@
 import * as pdfjsLib from "pdfjs-dist";
 import { useEffect, useState } from "react";
+// import pdfWorker from "pdfjs-dist/build/pdf.worker.js";
 
 export default function useGetPdfCanva() {
   const pdfUrl =
@@ -7,7 +8,8 @@ export default function useGetPdfCanva() {
   const [pages, setPages] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  pdfjsLib.GlobalWorkerOptions.workerSrc = "/public/pdf.worker.mjs";
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "pdf.worker.mjs";
+  // pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
   const base = "https://comfgtafwebapi.azhar-edu.org/";
   useEffect(() => {
