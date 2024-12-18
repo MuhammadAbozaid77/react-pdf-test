@@ -1,10 +1,10 @@
-import PdfViwer from "./components/PdfViwer";
+import UploadFile from "./components/UploadFile";
 
 export default function App() {
   return (
     <>
       <div style={{ padding: "100px" }}>
-        <PdfViwer />
+        <UploadFile />
       </div>
     </>
   );
